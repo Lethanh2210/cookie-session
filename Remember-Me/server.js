@@ -18,9 +18,6 @@ function creatServer(req, res) {
             maxAge: 60 * 60 * 24 * 7 // 1 week
         }));
 
-// Redirect back after setting cookie
-
-
         res.statusCode = 302;
         res.setHeader('Location', req.headers.referer || '/');
         res.end();
